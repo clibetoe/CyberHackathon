@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cyber Kill Chain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#005f73]">⛓️ The Cyber Kill Chain</h1>
+            <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">A security model outlining the seven distinct phases of a cyberattack, from initial reconnaissance to the attacker's final objective.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section id="kill-chain-stages" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">The Seven Stages of an Attack</h2>
+                <p class="mb-8 text-gray-600">The Cyber Kill Chain provides a framework to understand and defend against advanced cyber threats. Each stage represents a step an attacker must complete to achieve their goal.</p>
+                
+                <div class="relative flex flex-col items-center">
+                    
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#94d2bd] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">1</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Reconnaissance</h3>
+                            <p class="text-sm">Gathering information about the target. This can be passive (footprinting) or active (direct interaction like port scanning).</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#e9d8a6] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">2</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Weaponization</h3>
+                            <p class="text-sm">Creating a malicious deliverable, like a phishing email with a malicious attachment, to conduct the attack.</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#ee9b00] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">3</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Delivery</h3>
+                            <p class="text-sm">Transmitting the weaponized payload to the victim's environment, often via email, USB drives, or physical access.</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#ca6702] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">4</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Exploitation</h3>
+                            <p class="text-sm">Executing the code to take advantage of a vulnerability on the target system. This is where the attack begins.</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#bb3e03] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">5</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Installation</h3>
+                            <p class="text-sm">Installing the primary malware, backdoor, or remote access tool on the target system to ensure persistent access.</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#ae2012] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">6</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Command and Control (C2)</h3>
+                            <p class="text-sm">The attacker establishes a communication channel to control the compromised system and move laterally within the network.</p>
+                        </div>
+                    </div>
+                    <div class="w-1 h-8 bg-gray-300"></div>
+
+                    <div class="relative w-full md:w-3/4 p-4 mb-4 bg-[#9b2226] text-white rounded-lg shadow-lg text-center z-10 flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex-shrink-0 mb-2 md:mb-0 md:mr-4 text-2xl font-bold">7</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-xl">Actions on Objectives</h3>
+                            <p class="text-sm">The final stage where the attacker achieves their initial goals, such as data exfiltration or system destruction.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="detection-difficulty" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">Detection Difficulty by Stage</h2>
+                <p class="mb-6 text-gray-600">While defenders can implement controls at every stage, the difficulty of detecting a threat varies greatly. The chart below shows how active interaction with a target (like reconnaissance) is easier to detect than more subtle, internal actions.</p>
+                <div class="chart-container h-96">
+                    <canvas id="detectionChart"></canvas>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-[#0a9396] mt-8 mb-4">Why Detection Varies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#94d2bd]">
+                        <h4 class="font-bold text-lg text-[#005f73]">1. Reconnaissance</h4>
+                        <p class="text-sm mt-1">Detection is difficult during passive recon (no direct interaction), but active scanning leaves a clear digital footprint that can be easily detected by security tools.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#e9d8a6]">
+                        <h4 class="font-bold text-lg text-[#005f73]">2. Weaponization</h4>
+                        <p class="text-sm mt-1">This stage happens offline and is not detectable by the target, as the attacker is simply creating the malicious payload.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00]">
+                        <h4 class="font-bold text-lg text-[#005f73]">3. Delivery</h4>
+                        <p class="text-sm mt-1">This is a key chokepoint. While some methods are stealthy, others, like phishing emails, are often flagged by mail filters or antivirus software.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ca6702]">
+                        <h4 class="font-bold text-lg text-[#005f73]">4. Exploitation</h4>
+                        <p class="text-sm mt-1">The initial exploit often uses a small, stealthy "dropper" payload, making it difficult to spot within the noise of network traffic.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#bb3e03]">
+                        <h4 class="font-bold text-lg text-[#005f73]">5. Installation</h4>
+                        <p class="text-sm mt-1">This is one of the hardest stages to detect. Malware is designed to mimic legitimate processes and hide deep within the system, often evading standard security tools.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ae2012]">
+                        <h4 class="font-bold text-lg text-[#005f73]">6. Command & Control (C2)</h4>
+                        <p class="text-sm mt-1">While stealthy, this stage creates network traffic that can be identified by sophisticated Intrusion Detection Systems (IDS) looking for unusual communication patterns.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#9b2226]">
+                        <h4 class="font-bold text-lg text-[#005f73]">7. Actions on Objectives</h4>
+                        <p class="text-sm mt-1">This is the most detectable stage. Actions like data exfiltration or system destruction generate massive network and system activity, which security teams are trained to identify.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">Understanding the Cyber Kill Chain allows security teams to create a more effective defense by focusing on interrupting the attack at its earliest possible stage.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines.filter(line => line.length > 0);
+        };
+
+        const detectionCtx = document.getElementById('detectionChart').getContext('2d');
+        const detectionLabels = ['Reconnaissance', 'Weaponization', 'Delivery', 'Exploitation', 'Installation', 'Command and Control', 'Actions on Objectives'];
+        new Chart(detectionCtx, {
+            type: 'bar',
+            data: {
+                labels: detectionLabels.map(wrapLabel),
+                datasets: [{
+                    label: 'Detection Difficulty (1-10)',
+                    data: [8, 4, 7, 5, 2, 6, 9],
+                    backgroundColor: [
+                        '#94d2bd', '#e9d8a6', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226'
+                    ],
+                    borderColor: [
+                        '#0a9396', '#ee9b00', '#ca6702', '#bb3e03', '#ae2012', '#9b2226', '#005f73'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: 'Relative Difficulty to Detect'
+                        }
+                    },
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

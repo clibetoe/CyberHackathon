@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The MITRE ATT&CK Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#005f73]">🛡️ The MITRE ATT&CK Framework</h1>
+            <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">A global knowledge base of adversary tactics and techniques based on real-world observations, used by security teams to strengthen defenses.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- What is MITRE ATT&CK? Section -->
+            <section id="what-is-attck" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">What is MITRE ATT&CK?</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    The MITRE ATT&CK Framework is a comprehensive and globally accessible knowledge base that tracks adversary behavior across the entire attack lifecycle. Unlike simpler models like the Cyber Kill Chain, it provides a highly detailed matrix of specific tactics and techniques used by threat actors, helping organizations identify attack types and define risks more effectively.
+                </p>
+                <ul class="list-disc list-inside mt-4 text-gray-600 space-y-2">
+                    <li><strong class="text-[#005f73]">Comprehensive Matrix:</strong> A large database of tactics and techniques.</li>
+                    <li><strong class="text-[#005f73]">Tracks Attack Lifecycle:</strong> Covers the full scope of an attack from start to finish.</li>
+                    <li><strong class="text-[#005f73]">Continuously Updated:</strong> A curated and reliable source of up-to-date threat information.</li>
+                    <li><strong class="text-[#005f73]">Dual Perspective:</strong> Indexes attacks from both the attacker's and defender's viewpoints.</li>
+                </ul>
+            </section>
+
+            <!-- How Teams Use It Section -->
+            <section id="how-teams-use-it" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">How Security Teams Use the Framework</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Red Teams -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#94d2bd]">
+                        <h3 class="font-bold text-lg text-[#005f73]">Red Teams (Offensive)</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Replicate the documented attack scenarios to test an organization's defenses and identify weaknesses.
+                        </p>
+                    </div>
+                    <!-- Blue Teams -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ae2012]">
+                        <h3 class="font-bold text-lg text-[#005f73]">Blue Teams (Defensive)</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Test their security controls against known adversary behaviors to strengthen their security posture.
+                        </p>
+                    </div>
+                    <!-- Security Operations Teams -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ee9b00] md:col-span-2">
+                        <h3 class="font-bold text-lg text-[#005f73]">Security Operations Teams</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Use the framework to better understand adversary motivations and link their actions to specific defense classes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The ATT&CK Matrices Section -->
+            <section id="the-matrices" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">The ATT&CK Matrices</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">The framework is divided into three main matrices, each tailored to a different environment.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Enterprise Matrix -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#ca6702]">
+                        <h3 class="font-bold text-lg text-[#005f73]">ATT&CK for Enterprise</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Covers adversary behavior in traditional IT networks, including platforms like Windows, macOS, Linux, and Cloud environments.
+                        </p>
+                    </div>
+                    <!-- Mobile Matrix -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#e9d8a6]">
+                        <h3 class="font-bold text-lg text-[#005f73]">ATT&CK for Mobile</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Focuses on tactics and techniques used against mobile devices running Android and iOS.
+                        </p>
+                    </div>
+                    <!-- ICS Matrix -->
+                    <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-[#bb3e03]">
+                        <h3 class="font-bold text-lg text-[#005f73]">ATT&CK for ICS</h3>
+                        <p class="text-sm mt-1 text-gray-600">
+                            Tailored to operational technology (OT) environments, covering threats to industrial control systems and manufacturing floors.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tactics Categories Section -->
+            <section id="tactics-categories" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#0a9396] mb-4">ATT&CK for Enterprise Tactics</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    This is the most detailed matrix, with tactics representing the "why" of an adversary's action.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Reconnaissance</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Resource Development</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Initial Access</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Execution</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Persistence</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Privilege Escalation</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Defense Evasion</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Credential Access</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Discovery</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Lateral Movement</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Collection</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Command and Control</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Exfiltration</h4></div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><h4 class="font-semibold text-[#005f73]">Impact</h4></div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">The ATT&CK Framework is a living resource that provides a common language for security professionals to discuss and defend against threats.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
